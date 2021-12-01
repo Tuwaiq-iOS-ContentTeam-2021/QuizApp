@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-let catImage = UIImage(named: "quiz1.jpg")
-let myImageView:UIImageView = UIImageView()
+let viewImage = UIImage(named: "quiz1.jpg")
+let myImageView = UIImageView()
 let viewLabel = UILabel(frame: CGRect(x: 100, y: 100 , width: 200, height: 50))
 
 let questionsLabel = UILabel(frame: CGRect(x: 100, y: 500 , width: 200, height: 50))
@@ -32,7 +32,7 @@ let arrQuestions = ["IOS Is A __ software.", "The IDE Used In Swift Is.", "IOS S
         
         // image
         myImageView.frame = CGRect(x: 15, y: 150, width: 400, height: 300)
-        myImageView.image = catImage
+        myImageView.image = viewImage
         view.addSubview(myImageView)
 
         // Label 1
