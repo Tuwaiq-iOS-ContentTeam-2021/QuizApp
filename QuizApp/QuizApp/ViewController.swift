@@ -83,6 +83,7 @@ class ViewController: UIViewController{
         myQuizView.addSubview(answerButton)
         
     }
+    
     // Methods
     @objc func myQuestion() {
         print("hello")
