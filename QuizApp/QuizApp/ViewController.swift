@@ -52,7 +52,7 @@ class ViewController: UIViewController{
         questionLabel.text = "Here is the question"
         questionLabel.textColor = #colorLiteral(red: 0.2684474289, green: 0.3649398685, blue: 0.7585869431, alpha: 1)
         questionLabel.font = .systemFont(ofSize: 20, weight: .light)
-        questionLabel.frame = CGRect(x: 90, y: 40, width: 200, height: 60)
+        questionLabel.frame = CGRect(x: 40, y: 40, width: 300, height: 60)
         questionLabel.textAlignment = .center
         myQuizView.addSubview(questionLabel)
         
@@ -85,15 +85,14 @@ class ViewController: UIViewController{
     }
     // Methods
     @objc func myQuestion() {
-        
+        print("hello")
         questionLabel.text = arrayQuestion[counter]
         
-        if(counter < arrayQuestion.count-1)
-                  {
+        if counter < arrayQuestion.count-1 {
                       counter += 1
                   }
-                  else
-                  {
+        
+                  else {
                       counter = 0
                   }
     }
@@ -102,12 +101,11 @@ class ViewController: UIViewController{
         
         answerLabel.text = arrayAnswer[counter]
         
-        if(counter < arrayAnswer.count-1)
-                  {
+        if counter < arrayAnswer.count-1 {
                       counter += 1
                   }
-                  else
-                  {
+        
+                  else {
                       counter = 0
                   }
     }
