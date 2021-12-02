@@ -18,11 +18,12 @@ class ViewController: UIViewController{
     let nextQuestion = UIButton()
     let answerLabel = UILabel()
     let answerButton = UIButton()
+    var counter: Int = 0
     
     let arrayQuestion: [String] = ["What is the best company in the world?" , "Where is the best ecosystem in the world?", "What is the best mobile in the world?"]
     
     let arrayAnswer: [String] = ["Apple", "In Apple", "iPhone"]
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,18 +35,18 @@ class ViewController: UIViewController{
         backgroundImage.frame = CGRect(x: 0, y: 0, width: width, height: height)
         view.addSubview(backgroundImage)
         
-        // Quiz Section
-        backgroundImage.addSubview(myQuizView)
-        myQuizView.frame = CGRect(x: 25, y: 300, width: 380, height: 450)
-        myQuizView.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        myQuizView.layer.cornerRadius = 15
-        
         // AppName
         mainLabel.text = "Quiz App"
         mainLabel.textColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         mainLabel.font = .systemFont(ofSize: 40, weight: .semibold)
         mainLabel.frame = CGRect(x: 130, y: 70, width: 180, height: 60)
         view.addSubview(mainLabel)
+        
+        // Quiz Section
+        backgroundImage.addSubview(myQuizView)
+        myQuizView.frame = CGRect(x: 25, y: 300, width: 380, height: 450)
+        myQuizView.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        myQuizView.layer.cornerRadius = 15
         
         // QuestionLabel
         questionLabel.text = "Here is the question"
@@ -61,8 +62,7 @@ class ViewController: UIViewController{
         nextQuestion.backgroundColor = #colorLiteral(red: 0.2684474289, green: 0.3649398685, blue: 0.7585869431, alpha: 1)
         nextQuestion.frame = CGRect(x: 120, y: 100, width: 130, height: 40)
         nextQuestion.layer.cornerRadius = 10
-        nextQuestion.titleShadowColor(for: .normal)
-        nextQuestion.addTarget(self, action: #selector(question), for: .touchUpInside)
+        nextQuestion.addTarget(self, action: #selector(myQuestion), for: .touchUpInside)
         myQuizView.addSubview(nextQuestion)
         
         // AnswerLabel
@@ -79,18 +79,37 @@ class ViewController: UIViewController{
         answerButton.backgroundColor = #colorLiteral(red: 0.2684474289, green: 0.3649398685, blue: 0.7585869431, alpha: 1)
         answerButton.frame = CGRect(x: 110, y: 350, width: 160, height: 40)
         answerButton.layer.cornerRadius = 10
-        answerButton.titleShadowColor(for: .normal)
-        answerButton.addTarget(self, action: #selector(answer), for: .touchUpInside)
+        answerButton.addTarget(self, action: #selector(myAnswer), for: .touchUpInside)
         myQuizView.addSubview(answerButton)
         
     }
-    
-    @objc func question() {
-    
+    // Methods
+    @objc func myQuestion() {
+        
+        questionLabel.text = arrayQuestion[counter]
+        
+        if(counter < arrayQuestion.count-1)
+                  {
+                      counter += 1
+                  }
+                  else
+                  {
+                      counter = 0
+                  }
     }
     
-    @objc func answer() {
+    @objc func myAnswer() {
         
+        answerLabel.text = arrayAnswer[counter]
+        
+        if(counter < arrayAnswer.count-1)
+                  {
+                      counter += 1
+                  }
+                  else
+                  {
+                      counter = 0
+                  }
     }
 
 }
