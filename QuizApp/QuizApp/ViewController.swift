@@ -86,27 +86,24 @@ class ViewController: UIViewController {
     @objc func myQuestion() {
       
         questionLabel.text = arrayQuestion[counter]
-        
+        answerLabel.text = "??"
         if counter < arrayQuestion.count-1 {
                       counter += 1
                   }
-        
+
                   else {
                       counter = 0
                   }
     }
     
     @objc func myAnswer() {
+        if counter == 0 {
+            
+        } else{
+            answerLabel.text = arrayAnswer[counter-1]
+
+        }
         
-        answerLabel.text = arrayAnswer[counter]
-        
-        if counter < arrayAnswer.count-1 {
-                      counter += 1
-                  }
-        
-                  else {
-                      counter = 0
-                  }
     }
 
 }
