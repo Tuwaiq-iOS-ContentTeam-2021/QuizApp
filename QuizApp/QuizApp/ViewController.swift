@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController {
     
     // Properties
     let backgroundImage = UIImageView()
@@ -66,7 +66,7 @@ class ViewController: UIViewController{
         // AnswerLabel
         answerLabel.text = "??"
         answerLabel.textColor = #colorLiteral(red: 0.2684474289, green: 0.3649398685, blue: 0.7585869431, alpha: 1)
-        answerLabel.font = .systemFont(ofSize: 20, weight: .light)
+        answerLabel.font = .systemFont(ofSize: 14, weight: .light)
         answerLabel.frame = CGRect(x: 90, y: 300, width: 200, height: 60)
         answerLabel.textAlignment = .center
         myQuizView.addSubview(answerLabel)
@@ -84,7 +84,7 @@ class ViewController: UIViewController{
     
     // Methods
     @objc func myQuestion() {
-        print("hello")
+      
         questionLabel.text = arrayQuestion[counter]
         
         if counter < arrayQuestion.count-1 {
@@ -110,4 +110,6 @@ class ViewController: UIViewController{
     }
 
 }
+
+
 
