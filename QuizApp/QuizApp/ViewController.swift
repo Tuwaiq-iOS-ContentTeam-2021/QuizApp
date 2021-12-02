@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController{
     
     // Properties
-    
     let backgroundImage = UIImageView()
     let myQuizView = UIView()
     let mainLabel = UILabel()
@@ -28,7 +27,6 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         
         // Background
-        
         backgroundImage.image = UIImage(named: "11")
         let width = view.frame.width
         let height = view.frame.height
@@ -51,7 +49,7 @@ class ViewController: UIViewController{
         // QuestionLabel
         questionLabel.text = "Here is the question"
         questionLabel.textColor = #colorLiteral(red: 0.2684474289, green: 0.3649398685, blue: 0.7585869431, alpha: 1)
-        questionLabel.font = .systemFont(ofSize: 20, weight: .light)
+        questionLabel.font = .systemFont(ofSize: 14, weight: .light)
         questionLabel.frame = CGRect(x: 40, y: 40, width: 300, height: 60)
         questionLabel.textAlignment = .center
         myQuizView.addSubview(questionLabel)
