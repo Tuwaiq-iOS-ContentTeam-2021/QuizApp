@@ -64,32 +64,24 @@ class ViewController: UIViewController {
         
     }
     
+    var counter = 0
     
     @objc func nextQuestion(){
-        if arr1.isEmpty {
-            label2.text = "Congratulations!!"
-            button1.setTitle("", for: .normal)
-            button1.backgroundColor = .clear
-            
-        }else {
+        counter += 1
+        if counter < arr1.count {
             label2.textAlignment = .center
-            label2.text = arr1.first
-            arr1.removeFirst()
+            label2.text = arr1[counter]
             label3.text = "******************************"
             
+        }else {
+            counter = 0
+            label2.text = arr1[counter]
         }
     }
     
     @objc func ShowQuestion(){
-        if arr2.isEmpty {
-            label3.text = ""
-            button2.setTitle("", for: .normal)
-            button2.backgroundColor = .clear
-        }else {
-            label3.textAlignment = .center
-            label3.text = arr2.first
-            arr2.removeFirst()
-        }
+        label3.text = arr2[counter]
+        label3.textAlignment = .center
     }
 }
 
