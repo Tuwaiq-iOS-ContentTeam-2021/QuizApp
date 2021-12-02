@@ -19,9 +19,9 @@ class ViewController: UIViewController {
     let answerButton = UIButton()
     var counter: Int = 0
     
-    let arrayQuestion: [String] = ["What is the best company in the world?" , "Where is the best ecosystem in the world?", "What is the best mobile in the world?"]
+    let arrayQuestion: [String] = ["What is the best company in the world?" , "Where is the best ecosystem in the world?", "What is the best mobile in the world?",""]
     
-    let arrayAnswer: [String] = ["Apple", "In Apple", "iPhone"]
+    let arrayAnswer: [String] = ["Apple", "In Apple", "iPhone",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,28 +84,27 @@ class ViewController: UIViewController {
     
     // Methods
     @objc func myQuestion() {
-      
+        
         questionLabel.text = arrayQuestion[counter]
         answerLabel.text = "??"
         if counter < arrayQuestion.count-1 {
-                      counter += 1
-                  }
-
-                  else {
-                      counter = 0
-                  }
+            counter += 1
+        }
+        
+        else {
+            counter = 0
+        }
     }
     
     @objc func myAnswer() {
         if counter == 0 {
             
-        } else{
+        } else {
             answerLabel.text = arrayAnswer[counter-1]
-
         }
         
     }
-
+    
 }
 
 
