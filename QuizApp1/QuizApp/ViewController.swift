@@ -74,6 +74,7 @@ class ViewController: UIViewController {
         indexTwo += 1
         if indexTwo == answerArr.count {
             currentIndex = 0
+            indexTwo = 0
             
             
         }
