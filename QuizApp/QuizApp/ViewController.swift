@@ -58,10 +58,10 @@ class ViewController: UIViewController {
         nextQuestion.setTitle("Next Question", for: .normal)
         nextQuestion.setTitleColor(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1), for: .normal)
         nextQuestion.backgroundColor = #colorLiteral(red: 0.2684474289, green: 0.3649398685, blue: 0.7585869431, alpha: 1)
-        nextQuestion.frame = CGRect(x: 120, y: 100, width: 130, height: 40)
+        nextQuestion.frame = CGRect(x: 150, y: 390, width: 130, height: 40)
         nextQuestion.layer.cornerRadius = 10
-        nextQuestion.addTarget(self, action: #selector(myQuestion), for: .touchUpInside)
-        myQuizView.addSubview(nextQuestion)
+        nextQuestion.addTarget(self, action: #selector(myQuestion) , for: .touchUpInside)
+        view.addSubview(nextQuestion)
         
         // AnswerLabel
         answerLabel.text = "??"
@@ -75,10 +75,10 @@ class ViewController: UIViewController {
         answerButton.setTitle("Show The Answer", for: .normal)
         answerButton.setTitleColor(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1), for: .normal)
         answerButton.backgroundColor = #colorLiteral(red: 0.2684474289, green: 0.3649398685, blue: 0.7585869431, alpha: 1)
-        answerButton.frame = CGRect(x: 110, y: 350, width: 160, height: 40)
+        answerButton.frame = CGRect(x: 140, y: 650, width: 160, height: 40)
         answerButton.layer.cornerRadius = 10
         answerButton.addTarget(self, action: #selector(myAnswer), for: .touchUpInside)
-        myQuizView.addSubview(answerButton)
+        view.addSubview(answerButton)
         
     }
     
