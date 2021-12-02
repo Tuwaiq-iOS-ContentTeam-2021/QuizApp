@@ -58,7 +58,7 @@ class ViewController: UIViewController {
 
 
     @objc func getQuestion() {
-            question.text = self.questions[count] as? String
+            question.text = questions[count]
             if(count < questions.count-1)
             {
                 count += 1
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
             }
         }
     @objc func getAnswer() {
-            answer.text = self.answers[count] as? String
+            answer.text = answers[count]
             if(count < answers.count-1)
             {
                 count += 1
