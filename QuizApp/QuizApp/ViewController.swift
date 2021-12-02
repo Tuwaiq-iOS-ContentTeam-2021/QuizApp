@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController{
+    
+    // Properties
+    
     let backgroundImage = UIImageView()
     let myQuizView = UIView()
     let mainLabel = UILabel()
@@ -15,8 +18,11 @@ class ViewController: UIViewController{
     let nextQuestion = UIButton()
     let answerLabel = UILabel()
     let answerButton = UIButton()
+    
     let arrayQuestion: [String] = ["What is the best company in the world?" , "Where is the best ecosystem in the world?", "What is the best mobile in the world?"]
+    
     let arrayAnswer: [String] = ["Apple", "In Apple", "iPhone"]
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +51,8 @@ class ViewController: UIViewController{
         questionLabel.text = "Here is the question"
         questionLabel.textColor = #colorLiteral(red: 0.2684474289, green: 0.3649398685, blue: 0.7585869431, alpha: 1)
         questionLabel.font = .systemFont(ofSize: 20, weight: .light)
-        questionLabel.frame = CGRect(x: 100, y: 40, width: 200, height: 60)
+        questionLabel.frame = CGRect(x: 90, y: 40, width: 200, height: 60)
+        questionLabel.textAlignment = .center
         myQuizView.addSubview(questionLabel)
         
         // NextQuestionButton
@@ -62,7 +69,8 @@ class ViewController: UIViewController{
         answerLabel.text = "??"
         answerLabel.textColor = #colorLiteral(red: 0.2684474289, green: 0.3649398685, blue: 0.7585869431, alpha: 1)
         answerLabel.font = .systemFont(ofSize: 20, weight: .light)
-        answerLabel.frame = CGRect(x: 180, y: 300, width: 200, height: 60)
+        answerLabel.frame = CGRect(x: 90, y: 300, width: 200, height: 60)
+        answerLabel.textAlignment = .center
         myQuizView.addSubview(answerLabel)
         
         // AnswerButton
@@ -80,6 +88,7 @@ class ViewController: UIViewController{
     @objc func question() {
     
     }
+    
     @objc func answer() {
         
     }
