@@ -19,9 +19,9 @@ class ViewController: UIViewController {
     let answerButton = UIButton()
     var counter: Int = 0
     
-    let arrayQuestion: [String] = ["What is the best company in the world?" , "Where is the best ecosystem in the world?", "What is the best mobile in the world?",""]
+    let arrayQuestion: [String] = ["What is the best company in the world?" , "Where is the best ecosystem in the world?", "What is the best mobile in the world?","Here is the question"]
     
-    let arrayAnswer: [String] = ["Apple", "In Apple", "iPhone",""]
+    let arrayAnswer: [String] = ["Apple", "In Apple", "iPhone"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
