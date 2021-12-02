@@ -96,8 +96,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         uISettings()
-        
-        
     }
     func uISettings(){
         view.backgroundColor = .lightGray
@@ -165,7 +163,7 @@ class ViewController: UIViewController {
         isQuesioned = false
     }
     @objc func moreInfo(){
-        let alert = UIAlertController(title: "More info", message:
+        let alert = UIAlertController(title: "More info about \(answers[moreIndex])", message:
                                         more[moreIndex]
                                       , preferredStyle: .alert)
         
