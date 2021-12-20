@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SCLAlertView
 class ViewController: UIViewController {
 
     var arrQuestions: [String] = [
